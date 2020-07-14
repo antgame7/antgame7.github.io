@@ -1,0 +1,167 @@
+ 
+$font: "Gotham Book",Arial,Helvetica,sans-serif;
+$fontCaption: "Gotham Medium",Helvetica,Arial,sans-serif;
+
+
+$cOrange: #f0842f;
+$cBlue: #2187ed;
+/*******************************
+	helper small classes
+*******************************/
+.clearfix {
+	*zoom: 1;
+	&:after,
+	&:before {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+.bg-cover{
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+	background-size:cover;
+	&--bottom{
+		background-position:50% 100%;
+	}
+	&--top{
+		background-position:50% 0%;
+	}
+}
+.bg-fixed{
+	background-attachment: fixed;
+}
+
+
+/*******************************
+	typography
+*******************************/
+h1 {
+	color: #ffffff;
+	font: 32px/36px $fontCaption;
+	margin: 0;
+}
+h2 {
+	font: 28px/36px $fontCaption;
+	margin: 0;
+	color:#ffffff;
+}
+h3 {
+	font: 23px/30px $fontCaption;
+	margin: 0;
+	color:#ffffff;
+}
+h4 {
+	font: 14px/16px $fontCaption;
+	margin: 0;
+	color:#ffffff;
+}
+
+
+/*******************************
+	helper mixin
+*******************************/
+%reset {
+	box-shadow: none;
+	border-radius: 0;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	background: transparent;
+	appearance: none;
+}
+
+/*******************************
+	input element
+*******************************/
+.btn {
+	@extend %reset;
+	background: #f5a623;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font: 400 20px "Lato";
+	min-width: 160px;
+	padding: 10px 42px;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+    &--primary{
+        background: #d42f35;
+        font-size: 24px;
+        padding: 19px 17px;
+    }
+
+	&--full-w{
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	&--orange{
+		background: $cOrange;
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1) inset;
+		transition: all 0.5s ease 0s;
+		color: #ffffff;
+		border:1px solid #ef842f;
+		&:hover{
+			box-shadow: 0 100px 0 0  rgba(255, 255, 255, 0.1) inset;	
+		}
+		&:active,
+		&:focus{
+			box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1) inset, 0 0 0 2px rgba(0, 0, 0, 0.2) inset;
+		}
+	}
+	&:hover{
+		box-shadow: 0 100px 0 0  rgba(255, 255, 255, 0.1) inset;	
+	}
+	&:active,
+	&:focus{
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1) inset, 0 0 0 2px rgba(0, 0, 0, 0.2) inset;
+	}
+}
+
+input[type="tel"],
+input[type="email"],
+input[type="text"],
+textarea{
+	display: block;
+	border:1px solid #979797;
+
+	padding: 5px 15px;
+	width: 100%;
+
+	font-size: 12px;
+	height: 40px;
+
+	box-sizing: border-box;
+	border-radius: 0;
+
+	transition: all .2s ease;
+	appearance:none;
+
+	background: #ffffff;
+	color: #000000;
+
+	font: 400 12px "Lato";
+
+	outline: none;
+	&.center{
+		text-align: center;
+	}
+	&:focus{
+		background: #ffffff;
+		color: #000000;
+		appearance:none;
+		outline: none;
+		box-shadow: 0 0 3px 0px $cOrange inset;
+		border:1px solid #f5a623;
+	}
+	&.error{
+		border: 1px solid #da2727;
+	}
+}
