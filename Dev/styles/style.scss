@@ -20,7 +20,7 @@ html {
 }
 body {
 	color: #ffffff;
-	font: 16px/18px $font;
+	font: 20px/48px $font;
 	font-weight: normal;
 	font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
@@ -32,8 +32,8 @@ body {
 	height: 100%;
 	min-width: 1024px;
 
-	background-color:#000000;	
-	//background-image: url("../../Images/bg.jpg");
+	//background-color:#000000;
+	background-image: url("../../Images/bg.jpg");
 }
 
 a{
@@ -70,11 +70,11 @@ ul {
 	&__logo-holder{
 		left: 50%;
 		position: absolute;
-		top: 50%;
+		top: 60%;
 		//transform: translate(-50%, -50%);
 		margin: -130px 0 0 -180px;
 		width: 360px;
-		transition:all 1s ease 0s, opacity 1.8s ease 0s;
+		transition:all 10s ease 0s, opacity 1.8s ease 0s;
 		opacity: 0;
 
 		.caption{
@@ -91,12 +91,11 @@ ul {
 		}
 
 		&.in-top{
-			width: 126px;
-			top: 21px;
+			width: 150px;
+			top: 45px;
 			//transform: translate(-50%, 0px);
-			margin: 0 0 0 -63px;
-			top: 21px;
-			transition:all 0.5s ease 0s;
+			margin: 0 0 0 -84px;
+			transition:all 1s ease 0s;
 
 			.caption{
 				visibility: hidden;
@@ -119,7 +118,6 @@ ul {
 	position: absolute;
 	left: 50%;
 	margin-left: -360px;
-	position: absolute;
 	width: 720px;
 	top: 325px;
 	text-align: center;
@@ -132,6 +130,7 @@ ul {
 		display: inline-block;
 		font:normal 18px $font;
 		left: 50%;
+		top: 500px;
 		margin-left: -68px;
 		padding: 9px 20px;
 		position: absolute;
@@ -140,7 +139,6 @@ ul {
 		text-transform: uppercase;
 		width: 136px;
 		transition:opacity 0.5s ease 0s, border 0.4s ease 0s;
-		top: 245px;
 		z-index: 11;
 
 		opacity: 0;
@@ -198,7 +196,7 @@ ul {
 	}
 	&__item{
 		display: inline-block;
-		font:normal 12px/14px $fontCaption;
+		font:normal 16px/14px $fontCaption;
 		color: #ffffff;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -234,9 +232,25 @@ ul {
 		transform: translateY(10%);
 		transition: all 0.5s ease 0s;
 	}
+	.col-2-ul{
+		text-align: center;
+		column-count: 2;
+		column-gap: 30px;
+	}
+	ul {
+		text-align: -webkit-match-parent;
+		font-size: 18px;
+		//display: grid;
+		//flex-wrap: wrap;
+		//margin-top: 20px;
+	}
+	li{
+		text-transform: uppercase;
+		text-align: left;
+	}
 	p{
 		color: #ffffff;
-		line-height: 20px;
+		line-height: 28px;
 		margin: 15px auto 0 auto;
 		max-width: 650px;
 	}
