@@ -7,8 +7,6 @@ $invalid   = 'Validation errors occurred. Please confirm the fields and submit i
 
 if ( ! empty( $_POST ) ) {
 
-    require_once('recaptcha.php');
-
     if( isset( $_POST['email'] ) ) {
         $from = filter_var( $_POST['email'], FILTER_VALIDATE_EMAIL );
     } else {
