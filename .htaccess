@@ -1,5 +1,3 @@
-'.htaccess'
-
 #This snippet places into your .htaccess file either in /var/www/httpd, /var/www/httpd_docroot or /home/your username/public_html
 RewriteEngine On
 RewriteCond %{HTTPS} off
